@@ -1,0 +1,232 @@
+		#logo{
+			width:90%;
+			margin:10px auto 40px auto;
+		}
+		
+		#home #logo{
+			width:90%;
+			margin:30% auto 40px auto;
+		}
+		
+		#logo img{	
+			width:100%;
+		}
+		.botoes{
+			width:31%;
+			border: solid 1px #000;
+			display: inline-block;
+			text-align:center;
+			background-color:#e0ffb3;
+			border:solid 1px #a2d927;
+			margin-bottom:10px;
+			cursor: pointer;
+			border-radius: 3px;
+			box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
+					}
+					
+			.botoes:hover{	
+				background-color: #A1FF19;
+				border:solid 1px  #78A21C;
+			}
+					
+					
+			.botoes .icon{
+				margin-top:10px;
+				
+				}
+			.botoes .texto{
+							padding:10px 0;
+							}
+							
+				#potedesalada{
+	background-image: url(../icons/potesalada.png);
+	width: 100%;
+	background-position: left top;
+	background-repeat: no-repeat;
+	height:127px;
+	position:fixed;
+	bottom:30px;
+				}
+		.titulo{
+			padding:5px 0 !important;
+		}
+		
+		
+#panel
+{
+position:fixed;
+top:0px;
+background:#000000;
+padding:20px;
+display:none;
+width:100%;
+z-index:9999999;
+}
+#panel .adicionar{
+margin-right:4px;
+border: solid 1px #000;
+width:25%;
+			display: inline-block;
+			text-align:center;
+			background-color:#e0ffb3;
+			border:solid 1px #a2d927;
+			margin-bottom:10px;
+			cursor: pointer;
+			border-radius: 3px;
+			box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
+			padding:4px;
+			}
+
+
+.btn{
+	
+	display: inline-block;
+margin-bottom: 0;
+font-weight: 400;
+text-align: center;
+vertical-align: middle;
+cursor: pointer;
+background-image: none;
+border: 1px solid transparent;
+white-space: nowrap;
+padding: 6px 12px;
+font-size: 14px;
+line-height: 1.428571429;
+border-radius: 4px;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;
+
+}
+.vermelho{
+color: #fff;
+background-color: #d9534f;
+border-color: #d43f3a;	
+	}
+.verde{
+color: #fff;
+background-color: #5cb85c;
+border-color: #4cae4c;}
+
+.amarelo{
+	color: #fff;
+background-color: #ed9c28;
+border-color: #d58512;
+}
+
+
+#salada_box{
+	width:337px;
+	height:269px;
+	float:right;
+	background-image:url(../icons/salada.fw.png);
+	}
+#palco1,#palco2,#palco3,#palco4,#palco5,#palco6,
+#palco7,#palco8,#palco9,#palco10,#palco11,#palco12,#palco13,#palco14{
+	display: block;
+	float:left;
+	}
+
+.licons{
+		width: 40px;
+	height: 40px;
+	background-size:40px 40px;
+}
+#palco1{
+position:relative;
+z-index: 5;
+top: 40px;
+left: 40px;
+	}
+#palco2{
+position: relative;
+z-index: 6;
+top: 0px;
+left: 20px;
+	
+	}
+#palco3{
+	position: relative;
+z-index: 7;
+top: 40px; 
+left: 10px;
+	}
+#palco4{
+position: relative;
+z-index: 8;
+top: 10px; 
+left: 10px;
+}
+#palco5{
+position: relative;
+z-index: 9;
+top: 45px; 
+left: 50px;
+	}
+#palco6{
+position: relative;
+z-index: 10;
+top: 30px; 
+left:40px;
+}
+#palco7{
+	position: relative;
+z-index: 10;
+top: 45px; 
+left:-110px;
+}
+#palco8{	position: relative;
+z-index: 10;
+top:0px; 
+left:-100px;
+}
+
+.produtos{
+	padding:8px 4px;
+	background-color:#F8F8F8;
+	border-radius:4px;
+	margin-bottom:10px;
+	}
+.produtos h1{
+	font-size:18px;
+	line-height:18px;
+	margin:0;
+	
+	}
+	
+.produtos .apagar{
+	width:20px;
+	height:20px;
+	line-height:20px;
+	border-radius:60%;
+	background-color:#EA0716;
+	float:right;
+	color:#FFFFFF;
+	text-align:center;
+	}
+.produtos span{ font-size:12px;}
+.topM20{margin-top:-20px;}
+#totalcompras, #totalcompras_final{
+	background-color:#A4C208;
+	color: #fff;
+	border:solid 1px #a2d927;
+	margin-top:-20px;
+	padding:6px;
+	font-size:22px;
+	text-shadow:0  1px  0  #480f19 ;
+	border-radius:4px;
+	margin-bottom:10px;
+	}
+#totalcompras .totalgetal, #totalcompras_final .totalgetal{float:right;}
+.clear{clear:both !important}
+#recibo h3{
+	margin:0px !important;
+	padding:4px 0 !important;
+}
+hr{
+	margin:10px 0;
+	border:none;
+	border-bottom:1px solid #E7E7E7
+}

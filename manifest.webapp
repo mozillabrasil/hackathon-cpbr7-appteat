@@ -1,0 +1,21 @@
+{
+"launch_path":"/",
+"installs_allowed_from":["*"],
+"version":"0.0.1",
+"name":"appteat",
+"pkgName":"com.appteat.mobile",
+"description": "",
+"icons": {
+    "icons": {
+  "32": "/icons/32x32.png",
+  "64": "/icons/64x64.png",
+  "128": "/icons/128x128.png"
+}
+  },
+"developer": {
+    "name": "262design",
+    "url": "http://262design.com"
+  },
+  "default_locale": "pt-BR",
+  "fullscreen": "true"
+}

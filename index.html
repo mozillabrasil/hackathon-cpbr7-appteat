@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>APPEAT DEMO</title>
+		<link rel="stylesheet" href="themes/salada_0n.min.css" />
+		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+		<link rel="stylesheet" href="themes/mobile.js.css" />
+       <link rel="stylesheet" href="themes/main.css" />
+
+
+	</head>
+	<body>
+		<div data-role="page" data-theme="a" id='home'>
+			<div data-role="content" data-theme="a">
+            <div id="logo"><img src="themes/images/logo.jpg"/></div>
+            <a href="#saladas" data-role="button">Iniciar Ordem</a> 
+			</div>
+		</div>
+      
+      <div data-role="page" data-theme="a" id='saladas'>
+			<div data-role="content" data-theme="a">
+            <div id="logo"><img src="themes/images/logo.jpg"/></div>
+                            <div class="botoes" title="Almeirão" rel='1' data-preco="4.50">
+                     				<div class="icon"><img src="icons/almeirao.png" /></div>
+                                <div class="texto">Almeirão</div>
+                     			</div>
+
+                         <div class="botoes" title="Espinafre" rel='2' data-preco="5.50">
+                     				<div class="icon"><img src="icons/espinafre.png" /></div>
+                                <div class="texto">Espinafre</div>
+             			   </div>
+                        <div class="botoes" title="Repolho" rel='3' data-preco="5.00">
+                     				<div class="icon"><img src="icons/repolho.png" /></div>
+                                <div class="texto">Repolho</div>
+              			   </div>
+
+						<div class="botoes" title="Agrião" rel='4' data-preco="4.50">
+                     				<div class="icon"><img src="icons/agriao.png" /></div>
+                                <div class="texto">Agrião</div>
+                     </div>
+                     <div class="botoes" title="Alface" rel='5' data-preco="5.50">
+                     				<div class="icon"><img src="icons/alface.png" /></div>
+                                <div class="texto">Alface</div>
+             			 </div>
+                     <div class="botoes" title="Watergrass" rel='6' data-preco="6.00">
+                     				<div class="icon"><img src="icons/wathergrass.png" /></div>
+                                <div class="texto">Watergrass</div>
+              			</div>
+			</div>
+		</div>
+       
+      
+      
+      
+      <div data-role="page" data-theme="a" id='montar'>
+			<div data-role="content" data-theme="a">
+            <div id="logo"><img src="themes/images/logo.jpg"/></div>
+                        <div data-role="controlgroup" data-type="horizontal" >
+                            <a href="#1"  class="panel_btn" data-role="button" data-mini="true" title='1'>
+                            <span id="total">0</span>/8 Ingedientes</a>
+                          <a href="#2" class="panel_btn_opcoes" data-role="button"  data-mini="true" title='3'>Opções</a>
+                          <a href="#3"  class="panel_btn_molho" data-role="button" data-mini="true" title='2' >Molhos</a>
+           			</div>         
+                    <div id="demo"></div>
+				      <div id="opicionais_div"></div>
+ 				     <div id='molhosq'></div> 
+    				 
+			</div><!--fim do bady -->
+            
+                               <div id="potedesalada">
+                                    <div id="salada_box">
+                                        <div id="palco1" class="my_cars_empty"></div>
+                                        <div id="palco2" class="my_cars_empty"></div>
+                                        <div id="palco3" class="my_cars_empty"></div>
+                                        <div id="palco4" class="my_cars_empty"></div>
+                                        <div id="palco5" class="my_cars_empty"></div>
+                                        <div id="palco6" class="my_cars_empty"></div>
+                                        <div id="palco7" class="my_cars_empty"></div>
+                                        <div id="palco8" class="my_cars_empty"></div>
+                                  </div>
+                 				</div>
+
+		     <div data-role="footer" data-position="fixed">
+      				<h3 class="titulo"><span id="s_nome">nome</span> $ <span id="preco">o</span> </h3>
+                  <div id="finalizarPrato" class="btn verde" style="width:100%"> FINALIZAR SALADA</div>
+            </div> 
+                    <div id="panel">
+                    <div class="dados"></div>
+                    <div id="fecharpanel" class="btn vermelho">Fechar</div>
+                    </div>
+                    
+        
+        </div>
+
+      <div data-role="page" data-theme="a" id='carrinho'>
+			<div data-role="content" data-theme="a">
+            <div id="logo"><img src="themes/images/logo.jpg"/></div>
+                        
+                       <div id="totalcompras"></div> 
+                        <div id="carrinho_compras"></div>
+                        
+           <div  class="home btn verde">NOVA SALADA</div>
+           <div  class="delivery btn vermelho">CONCLUIR COMPRA</div>
+
+                        
+							
+			</div>
+            
+           
+          
+            
+            
+		</div>
+      
+       <div data-role="page" data-theme="a" id='delivery'>
+			<div data-role="content" data-theme="a">
+            <div id="logo"><img src="themes/images/logo.jpg"/></div>
+           		 <form class="topM20">
+                 			<h3>ENDEREÇO PARA ENTREGAR</h3>
+                       <input type="text" id="nome" placeholder="Nome" required>
+                       <input type="email" id="email" placeholder="Email" required>
+                       <input type="text" id="endereco" placeholder="Endereço" required>
+                       <input type="text" id="bairro" placeholder="Bairro" required>
+                       <input type="text" id="cep" placeholder="Cep" required>
+                       <textarea id="cep" placeholder="Instruções Espaciais"></textarea>
+                       <div id="btn-delivery" class="btn vermelho">CONTINUAR >></div>
+            		</form>
+			</div>
+		</div>
+    
+    
+    
+    
+    
+    <div data-role="page" data-theme="a" id='pagamento'>
+			<div data-role="content" data-theme="a">
+            <div id="logo"><img src="themes/images/logo.jpg"/></div>
+            <form class="topM20" id='pagamento_form'>
+                 			<h3>FORMA DE PAGAMENTO</h3>
+                              <label>
+                                <input type="radio" name="pagamentos" value="Dinherio" id="pagamentos_0">
+                                Dinheiro</label>
+                              <label>
+                                <input type="radio" name="pagamentos" value="Vale Refeição" id="pagamentos_1">
+                                Vale Refeição</label>
+                              <label>
+                                <input type="radio" name="pagamentos" value="Ticket Refeição" id="pagamentos_2">
+                                Ticket Refeição</label>
+                              <label>
+                                <input type="radio" name="pagamentos" value="Paypal" id="pagamentos_3">
+                                Paypal</label>
+                                
+                                 <div id= "btn-concluir-compra" class="btn vermelho">CONTINUAR >></div>
+                                
+            </form>
+			</div>
+		</div>
+        
+        
+    <div data-role="page" data-theme="a" id='recibo'>
+			<div data-role="content" data-theme="a">
+            <div id="logo"><img src="themes/images/logo.jpg"/></div>
+            
+            <div id="delivery_endereco" class="topM20"></div>
+            <div id="forma_pagamento"></div>
+            <hr>
+            <h3>Ordem</h3>
+   
+            <div id="carrinho_final"></div>
+           <br>
+				
+            <div id="totalcompras_final"></div><br>
+            <div  class="home btn verde" >NOVA ORDEM</div>
+			</div>
+            
+           
+		</div>    
+        
+		<script src="js/jquery-1.10.2.min.js"></script>
+		<script src="js/jquery.mobile-1.4.0.min.js"></script>
+       
+		<script src="js/main.js"></script>
+
+<script type="text/javascript" charset="utf-8">
+ var ingredientes_aaray=[], molho_aaray=[];extra_aaray =[]; totale = new Array();
+
+
+$(".botoes").click(function(){
+window.localStorage.removeItem("salada_id");
+window.localStorage.removeItem("salada_name");
+window.localStorage.removeItem("preco");
+//--------------------------------------------
+window.localStorage.setItem("salada_id", $(this).attr("rel"));
+window.localStorage.setItem("salada_name", $(this).attr("title"));
+window.localStorage.setItem("preco", $(this).attr("data-preco"));
+$.mobile.changePage("#montar", { transition: "none"});
+});
+
+
+$( document ).on( 'pagebeforeshow', '#montar', function(event, ui){
+     });
+
+	$( document ).on( 'pageshow', '#montar', function(event, ui){
+
+		$("#s_nome").html(window.localStorage.getItem("salada_name"));
+		$("#preco").html(window.localStorage.getItem("preco"));
+		
+			menu_ingredientes = [];
+			menu_molhos = [];		
+			 menu_opcoes = [];		
+         ///pega todos is itens
+          var url= 'http://acheibr.com/app/class/get_Allitem.class.php?randomnumber='+Math.floor(Math.random()*9999999999);
+			$.ajax({
+				   url:url,
+				   dataType: 'jsonp',
+				   jsonp: 'jsoncallback',
+				   timeout: 5000,
+				   beforeSend : function() {$.mobile.loading('show',"d", "Carregando Dados")},
+				   complete   :function() {$.mobile.loading('hide')},
+				   success    : function(response) {
+					  
+					   for(index = 0; index < response.length; index++) {
+								/// temp itensa
+								if(response[index]['items']==1){
+								  menu_ingredientes.push({
+										id:response[index]['add_id'],
+										name: response[index]['nome_pt']
+			 						});
+								  
+								  
+								   }
+							if(response[index]['items']==2){
+								  menu_molhos.push({
+										id:response[index]['add_id'],
+										name: response[index]['nome_pt']
+			 						});
+								   }
+							if(response[index]['items']==3){
+								  menu_opcoes.push({
+										id:response[index]['add_id'],
+										name: response[index]['nome_pt']
+			 						});
+								   }
+					           }
+					   }				   
+			})			  
+	});
+	
+
+
+function carrinhosA(){
+var html = ''
+var totalcompra=0;
+
+	 for (var i = 0; i < totale.length; i++) {
+		  totalcompra = parseFloat(totale[i]['preco'])+parseFloat(totalcompra);
+		  
+		 html +="<div id='p"+i+"' class='produtos'>"+
+		        "<a class='apagar' rel='"+i+"'>x</a><h1>"+totale[i]['produto']+" $"+totale[i]['preco']+"</h1>";
+				
+		if(totale[i]['ingredientes']!=''){
+			var totaleint =totale[i]['ingredientes'];
+			var conjunto = '';
+			
+			for (var it = 0; it < totaleint.length; it++) {
+				conjunto +="<span>"+totale[i]['ingredientes'][it]['nome']+"</span> ";
+		}
+		html +="<span>"+conjunto+"<span>";	
+		}
+		
+		if(totale[i]['molho']!=''){
+			var totaleint2 =totale[i]['molho'];
+			var conjunto2 = '';
+			
+			for (var it = 0; it < totaleint2.length; it++) {
+				conjunto2 +="<span>"+totale[i]['molho'][it]['nome']+"</span> ";
+		}
+					html +="<span>"+conjunto2+"<span>";	
+		}
+		
+		if(totale[i]['extra']!=''){
+			var totaleint3 =totale[i]['extra'];
+			var conjunto3 = '';
+			
+			for (var it = 0; it < totaleint3.length; it++) {
+				conjunto3 +="<span>"+totale[i]['extra'][it]['nome']+"</span> ";
+		}
+					html +="<span>"+conjunto3+"<span>";	
+		}
+				
+		 html += "</div>";
+      }
+	
+	   $("#totalcompras").html("TOTAL $ <div class='totalgetal'>"+totalcompra.toFixed(2)+"</div>");
+      $("#carrinho_compras").html(html);
+}
+	
+	
+	
+	
+$( document ).on( 'pageshow', '#carrinho', function(event, ui){
+	carrinhosA();
+});	
+	
+	
+$( document ).on( 'pageshow', '#recibo', function(event, ui){
+	
+    
+	$("#delivery_endereco").html("<h3>Endereço de entrega</h3>"+window.localStorage.getItem("nome")+"<br>"+
+	                             window.localStorage.getItem("endereco")+" "+window.localStorage.getItem("bairro")+" "+window.localStorage.getItem("cep")+
+								 "<hr>");
+	$("#forma_pagamento").html("<h3>Forma de Pagamento</h3>"+window.localStorage.getItem("pagamento"));
+	
+	
+	var html = ''
+var totalcompra=0;
+
+	 for (var i = 0; i < totale.length; i++) {
+		  totalcompra = parseFloat(totale[i]['preco'])+parseFloat(totalcompra);
+		  
+		 html +="<div id='p"+i+"' class='produtos'>"+
+		        "<h1>"+totale[i]['produto']+" $"+totale[i]['preco']+"</h1>";
+				
+		if(totale[i]['ingredientes']!=''){
+			var totaleint =totale[i]['ingredientes'];
+			var conjunto = '';
+			
+			for (var it = 0; it < totaleint.length; it++) {
+				conjunto +="<span>"+totale[i]['ingredientes'][it]['nome']+"</span> ";
+		}
+		html +="<span>"+conjunto+"<span>";	
+		}
+		
+		if(totale[i]['molho']!=''){
+			var totaleint2 =totale[i]['molho'];
+			var conjunto2 = '';
+			
+			for (var it = 0; it < totaleint2.length; it++) {
+				conjunto2 +="<span>"+totale[i]['molho'][it]['nome']+"</span> ";
+		}
+					html +="<span>"+conjunto2+"<span>";	
+		}
+		
+		if(totale[i]['extra']!=''){
+			var totaleint3 =totale[i]['extra'];
+			var conjunto3 = '';
+			
+			for (var it = 0; it < totaleint3.length; it++) {
+				conjunto3 +="<span>"+totale[i]['extra'][it]['nome']+"</span> ";
+		}
+					html +="<span>"+conjunto3+"<span>";	
+		}
+				
+		 html += "</div><div class='clear'></div>";
+      }
+	
+	
+	$("#carrinho_final").html(html);
+	   $("#totalcompras_final").html("TOTAL $ <div class='totalgetal'>"+totalcompra.toFixed(2)+"</div>");
+      
+			for (var i = 0; i < totale.length; i++) {
+			totale.splice(0, Number.MAX_VALUE);
+			}
+});	
+	
+	
+
+	
+$(document).on ("click", ".apagar", function () {
+				 i = $(this).attr("rel");
+					 totale.splice(i, 1);
+					 carrinhosA();
+		});	
+		
+		
+		
+		
+$(document).on ("click", "#btn-delivery", function () {
+	window.localStorage.setItem("nome",$("#nome").val());
+	window.localStorage.setItem("email",$("#email").val());
+	window.localStorage.setItem("endereco",$("#endereco").val());
+	window.localStorage.setItem("bairro",$("#bairro").val());
+	window.localStorage.setItem("cep",$("#cep").val());
+	$.mobile.changePage("#pagamento");
+	
+		});	
+		
+		
+		
+$(document).on ("click", ".home", function () {
+	$.mobile.changePage("#home");
+	
+		});	
+				
+		
+$(document).on ("click", ".delivery", function () {
+	$.mobile.changePage("#delivery");
+	
+		});	
+				
+$(document).on ("click", "#btn-concluir-compra", function () {
+	 window.localStorage.setItem("pagamento",$('input[name=pagamentos]:checked', '#pagamento_form').val());
+	 $.mobile.changePage("#recibo");
+		});	
+				
+
+
+</script>
+	</body>
+</html>
